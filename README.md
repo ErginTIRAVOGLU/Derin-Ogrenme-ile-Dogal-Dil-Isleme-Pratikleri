@@ -3,3 +3,4 @@ Url = [https://www.btkakademi.gov.tr/portal/course/derin-ogrenme-ile-dogal-dil-i
 
 Proje Listesi
 proje1 - RNN ile duygu dedektifi
+proje2 - LSTM ile metin üretimi
