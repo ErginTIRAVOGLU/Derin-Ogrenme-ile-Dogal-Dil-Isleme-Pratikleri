@@ -1,0 +1,1 @@
+uvicorn doktor_assistant_api:app --reload
