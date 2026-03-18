@@ -90,7 +90,57 @@ print(f"y_train: {y_train[:2]}")
 
 
 # LSTM tabanlı regresyen modeli
+model = Sequential()
+
+# embedding katmanı: kelime indexlerini vektör uzayına dönüştürür
+# input_dim: 10000 -> kelime sayısı
+# output_dim: 128 -> her bir kelime 128 boyutlu bir vektörle temsil edilecek
+# input_length: 100 -> sabit dizi uzunluğu yani her bir metnimizin uzunluğu
+model.add(Embedding(input_dim=10000, output_dim=128,input_length=100))
+
+# LSTM katmanı: sıralı veride bağlamı öğrenecek olan katman
+model.add(LSTM(128)) # 128: lstm de bulunan hücre sayısı yani daha fazla öğrenme kapasitesi
+# 520000 kayıt var 128 yeterli olacaktır, olmaz ise arttırılacak
+
+# tam bağlı (dense) katmanı:
+model.add(Dense(64, activation="relu"))
+
+# output katmanı:
+# relu ve tanh -> tam bağlı katmanlarda kullanılıyor, yani ara/hidden layerlarında kullanılıyor
+# sigmoid ve softmax -> sınıflandırma problemlerinde kullanılıyor, sigmoid 2 sınıflı sınıflandırma problemleri için, softmax çok sınıflı sınıflandırma problemlerinde kullanılıyor
+# linear -> regresyon problemlerinde kullanılıyor 
+model.add(Dense(1,activation="linear")) # relu, tanh, sigmoid, softmax ve linear
+
 
 # model compile and trainig
+model.compile(
+    optimizer="adam", # Adam: öğrenme hızını otomatik ayarlayan, hızlı ve stabil bir optimizasyon algoritmasıdır.
+    loss=MeanSquaredError(), # MSE: hataların karesini alır, büyük hataları daha fazla cezalandırdığı için regresyonda yaygın kullanılır.
+    metrics=[MeanAbsoluteError()] # MAE: tahminlerin ortalama kaç birim saptığını gösterir, yorumlaması kolay bir performans metriğidir.
+)
+
+history = model.fit(
+    X_train, y_train,
+    epochs=3, # model veriyi 3 kez baştan sona öğrenir (her tur = 1 epoch)
+    batch_size=64, # veriyi 64'lük parçalara bölerek öğrenir (daha hızlı ve stabil eğitim)
+    validation_split=0.2 # verinin %20'sini doğrulama için ayırır, modelin genelleme performansını ölçer
+)
 
 # eğitim kayıp grafiğini görselleştir ve modeli kaydet
+plt.plot(history.history["loss"], label="Train Loss")
+plt.plot(history.history["val_loss"], label="Validation Loss")
+plt.title("Training and Validation loss - Eğitim süreci: MSE:")
+plt.xlabel("Epoch")
+plt.ylabel("Loss MSE")
+plt.show()
+
+# 6500/6500 loss: 0.0346 - mean_absolute_error: 0.1400 - val_loss: 0.0360 - val_mean_absolute_error:0.1441 
+# 6500/6500 # toplam 6500 batch işlenmiş (örnek: 416.000 veri / 64 batch_size ≈ 6500 batch)
+
+# loss: 0.0346 # eğitim verisindeki MSE hatası (örnek: gerçek=3, tahmin=2 → hata=1 → karesi=1, ortalamada 0.0346)
+# mean_absolute_error: 0.1400 # eğitim verisinde tahminler ortalama 0.14 birim sapıyor (örnek: 3 yerine 2.86 veya 3.14 tahmin)
+# val_loss: 0.0360 # doğrulama verisindeki MSE (örnek: modelin hiç görmediği veride hata biraz artmış ama yakın)
+# val_mean_absolute_error: 0.1441 # doğrulama verisinde ortalama sapma 0.1441 (örnek: 5 yerine 4.85 veya 5.15 tahmin)
+
+# modeli kaydet
+model.save("regression_lstm_yelp.h5")
