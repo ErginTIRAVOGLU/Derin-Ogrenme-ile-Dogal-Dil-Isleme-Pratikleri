@@ -7,6 +7,8 @@ proje2 - LSTM ile metin üretimi<br>
 proje3 - LSTM ile yorum puan tahmini<br>
 proje4 - GPT ile dooktor assistanı<br>
 proje5 - llama ile akıllı turizm rehberi<br>
-proje6 - gemini (openai) ile akıllı asistan projesi
-proje7 - gpt ile sesli asistan
+proje6 - gemini (openai) ile akıllı asistan projesi<br>
+proje7 - gpt ile sesli asistan<br>
+proje8 - rag ile sözleşme avukatı<br>
+
 
