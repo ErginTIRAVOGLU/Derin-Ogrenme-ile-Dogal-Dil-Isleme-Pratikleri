@@ -30,7 +30,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 
 # LLM Yapılandırması
 llm = ChatOpenAI(
-    model="gpt-4o-mini",  # Düzeltildi: Geçerli model
+    model="gpt-4.1-nano",  # Düzeltildi: Geçerli model
     temperature=0.7,
     api_key=api_key
 )
