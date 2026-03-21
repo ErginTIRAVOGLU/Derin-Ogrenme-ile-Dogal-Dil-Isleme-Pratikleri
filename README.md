@@ -8,4 +8,5 @@ proje3 - LSTM ile yorum puan tahmini<br>
 proje4 - GPT ile dooktor assistanı<br>
 proje5 - llama ile akıllı turizm rehberi<br>
 proje6 - gemini (openai) ile akıllı asistan projesi
+proje7 - gpt ile sesli asistan
 
