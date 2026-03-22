@@ -26,6 +26,7 @@ langchain==1.2.13
 langchain-classic==1.0.3
 langchain-community==0.4.1
 langchain-core==1.2.20
+langchain-openai==1.1.11
 langchain-text-splitters==1.1.1
 langgraph==1.1.3
 langgraph-checkpoint==4.0.1
@@ -48,11 +49,13 @@ pydantic-settings==2.13.1
 pydantic_core==2.41.5
 python-dotenv==1.2.2
 PyYAML==6.0.3
+regex==2026.2.28
 requests==2.32.5
 requests-toolbelt==1.0.0
 sniffio==1.3.1
 SQLAlchemy==2.0.48
 tenacity==9.1.4
+tiktoken==0.12.0
 tqdm==4.67.3
 typing-inspect==0.9.0
 typing-inspection==0.4.2
