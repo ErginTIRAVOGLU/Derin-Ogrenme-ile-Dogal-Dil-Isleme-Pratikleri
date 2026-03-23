@@ -1,4 +1,8 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "python.pythonPath": "C:/Dev/btk/derin-orgenme/proje10 - rag ve memory ile müşteri destek botu/venv/Scripts/python.exe",
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": ["C:/Dev/btk/derin-orgenme/proje10 - rag ve memory ile müşteri destek botu/venv/Lib/site-packages"
+    ]
 }
