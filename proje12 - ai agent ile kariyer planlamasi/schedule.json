@@ -1,0 +1,50 @@
+{
+  "Hafta 1": [
+    {
+      "gorev": "Lisans eğitimini bilgisayar bilimi, istatistik, matematik veya ilgili bir alanda tamamla.",
+      "baslangic_tarihi": "2026-03-24"
+    },
+    {
+      "gorev": "Veri bilimi projeleri yaparak portföy oluştur (Kaggle yarışmaları, kişisel projeler).",
+      "baslangic_tarihi": "2026-03-24"
+    },
+    {
+      "gorev": "Ağ kur ve mentorlar edinerek sektördeki fırsatları takip et.",
+      "baslangic_tarihi": "2026-03-24"
+    }
+  ],
+  "Hafta 2": [
+    {
+      "gorev": "Temel programlama dillerini öğren (Python, R gibi).",
+      "baslangic_tarihi": "2026-03-31"
+    },
+    {
+      "gorev": "İş ilanlarını takip ederek gerekli ek sertifikaları al (Google Data Analytics, IBM Data Science vb.).",
+      "baslangic_tarihi": "2026-03-31"
+    },
+    {
+      "gorev": "İş deneyimini artırmak ve uzmanlaşmak için sürekli eğitim ve projeler yap.",
+      "baslangic_tarihi": "2026-03-31"
+    }
+  ],
+  "Hafta 3": [
+    {
+      "gorev": "Veri analizi ve istatistiksel yöntemler konusunda temel bilgi edin.",
+      "baslangic_tarihi": "2026-04-07"
+    },
+    {
+      "gorev": "Staj veya giriş seviyesi veri bilimi pozisyonları için başvurular yap.",
+      "baslangic_tarihi": "2026-04-07"
+    }
+  ],
+  "Hafta 4": [
+    {
+      "gorev": "Veri görselleştirme araçlarını öğren (Matplotlib, Seaborn, Tableau vb.).",
+      "baslangic_tarihi": "2026-04-14"
+    },
+    {
+      "gorev": "Gelişmiş makine öğrenmesi ve derin öğrenme konularında eğitim al.",
+      "baslangic_tarihi": "2026-04-14"
+    }
+  ]
+}

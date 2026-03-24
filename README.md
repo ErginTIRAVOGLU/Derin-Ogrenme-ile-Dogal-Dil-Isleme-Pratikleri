@@ -12,6 +12,6 @@ proje7 - gpt ile sesli asistan<br>
 proje8 - rag ile sözleşme avukatı<br>
 proje9 - ai agent ile yatırım uzmanı<br>
 proje10 - rag ve memory ile müşteri destek botu<br>
-proje11 - akıllı proje yöneticisi<br>
+proje11 - akıllı proje yöneticisi (pdf %100 uygun değil)<br>
 proje12 - ai agent ile kariyer planlaması<br>
 
