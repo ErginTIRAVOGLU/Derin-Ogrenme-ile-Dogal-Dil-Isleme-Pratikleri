@@ -13,4 +13,5 @@ proje8 - rag ile sözleşme avukatı<br>
 proje9 - ai agent ile yatırım uzmanı<br>
 proje10 - rag ve memory ile müşteri destek botu<br>
 proje11 - akıllı proje yöneticisi<br>
+proje12 - ai agent ile kariyer planlaması<br>
 
